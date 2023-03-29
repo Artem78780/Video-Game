@@ -1,4 +1,5 @@
 export interface Game {
+    id: string
     background_image: string;
     name: string;
     released: string;
@@ -18,31 +19,32 @@ export interface APIResponse<T> {
     results: Array<T>;
 }
 
-interface  Genre {
+interface Genre {
     name: string
 }
 
 interface ParentPlatform {
     platform: {
+        slug: any
         name: string
     }
 }
 
-interface  Publishers {
+interface Publishers {
     name: string
 }
 
-interface  Rating {
+interface Rating {
     id: number,
     count: number,
     title: string
 }
 
-interface  Screenshots {
+interface Screenshots {
     image: string
 }
 
-interface  Trailer {
+interface Trailer {
     data: {
         max: string
     }
