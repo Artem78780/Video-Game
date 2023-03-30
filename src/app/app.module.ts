@@ -15,13 +15,19 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
-import {HttpErrorInterceptor} from './interceptors/http-error.interceptor'
+import {HttpErrorInterceptor} from './interceptors/http-error.interceptor';
+import { DetailsComponent } from './components/details/details.component';
+import { GameTabsComponent } from './components/game-tabs/game-tabs.component'
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsComponent,
+    GameTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ import {HttpErrorInterceptor} from './interceptors/http-error.interceptor'
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    YouTubePlayerModule
+    
   ],
   providers: [
     {
